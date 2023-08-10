@@ -7,11 +7,11 @@ docker pull <image name:tag> : to pull image from a docker registry
 
 docker images/docker image ls : to list current images in your local registry
 
-docker rmi <image name:tag> : To remove images from local registry
+docker rmi <image name:tag> (we can also use the image id to remove an image) : To remove images from local registry
 
-docker rmi -f $(docker images) : Remove all docker images at once
+docker rmi -f $(docker images)  : Remove all docker images at once
 
-docker search <image name> To search for an image name from a public registry
+docker search <image name> To stearch for an image name from a public registry
 
 docker save <image name>  >  filename.tar  : To save an image in a tar format and share with other people
 
@@ -26,7 +26,7 @@ docker run <image name>: to start and run a container
 
 docker run --detached or docker run -d : to run docker in detached mode or backgroud mode so you can have access to your terminal while container runs in the backend.
 
-docker run -d -p <host-port:container-port> --name <container name> <image> : to start a container in detached mode, passing  port binding from your host to container port and provifing a name to the container.
+docker run -d -p <host-port:container-port> --name <container name> <image> : to start a container in detached mode, passing  port binding from your host to container port and providing a name to the container (you cannot have two host port with the same name).
 
 docker ps : to list containers running state
 
